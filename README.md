@@ -1,4 +1,6 @@
-# React 版流沙社区
+# React 版六少社区
+
+六少社区始于大学时期，以当年的六人之名，纪念那段大学生涯。
 
 基于 React 19、TypeScript strict、React Router 7 和 Vite 8，实现与同级 `liushao_community_frontend` 对接同一后端的社区功能，并保留井字棋小游戏。
 

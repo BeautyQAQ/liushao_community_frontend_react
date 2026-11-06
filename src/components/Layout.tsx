@@ -26,7 +26,7 @@ export default function Layout() {
   useEffect(() => {
     setMenuOpen(false)
     if (account.current) account.current.open = false
-    document.title = `${title} - 流沙社区`
+    document.title = `${title} - 六少社区`
     window.scrollTo({ top: 0, behavior: 'instant' })
     if (auth.user) void auth.refreshInbox()
   }, [location.pathname, location.search, title])
@@ -60,7 +60,7 @@ export default function Layout() {
     }}>跳到主要内容</a>
     <header className="site-header" ref={header} onKeyDown={event => { if (event.key === 'Escape') closeMenus() }}>
       <nav className="container site-navigation" aria-label="社区导航">
-        <Link to="/" className="brand"><span className="brand-mark" aria-hidden="true">流</span>流沙社区</Link>
+        <Link to="/" className="brand"><span className="brand-mark" aria-hidden="true">六</span>六少社区</Link>
         <button type="button" ref={menuButton} className="menu-toggle" aria-expanded={menuOpen} aria-controls="community-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? '收起导航' : '展开导航'}</button>
         <div id="community-navigation" className={`navigation-panel${menuOpen ? ' is-open' : ''}`}>
           <NavLink to="/" end className="nav-link">主页</NavLink>
@@ -93,7 +93,7 @@ export default function Layout() {
       {auth.error && <ErrorNotice error={`登录状态暂时无法恢复：${auth.error}`} retry={auth.refresh} />}
       <Suspense fallback={<Loading />}><div key={location.pathname}><Outlet /></div></Suspense>
     </main>
-    <footer className="site-footer"><div className="container"><span>流沙社区 · 分享经验，记录想法</span><Link to="/games/tic-tac-toe">休息一下，来盘井字棋</Link></div></footer>
+    <footer className="site-footer"><div className="container"><span>六少社区 · 始于大学，以六人之名纪念大学生涯</span><Link to="/games/tic-tac-toe">休息一下，来盘井字棋</Link></div></footer>
     <button type="button" className="back-top" aria-label="返回顶部" onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })}>↑</button>
   </>
 }

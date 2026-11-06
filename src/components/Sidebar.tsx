@@ -15,7 +15,7 @@ export default function Sidebar() {
       <div className="actions">{user ? <><Link className="button primary" to="/post/create">发表想法</Link><Link to="/me/drafts">草稿箱</Link></> : <><Link className="button primary" to="/register">马上入驻</Link><Link className="button" to="/login">社区登录</Link></>}</div>
     </Panel>
     <Panel title={<h2>每日一句</h2>}>
-      {tip.loading ? <Loading /> : tip.error ? <ErrorNotice error={tip.error} retry={tip.reload} /> : <blockquote>{tip.data?.content || '欢迎分享你的经验与想法。'}<footer>—— {tip.data?.author || '流沙社区'}</footer></blockquote>}
+      {tip.loading ? <Loading /> : tip.error ? <ErrorNotice error={tip.error} retry={tip.reload} /> : <blockquote>{tip.data?.content || '欢迎分享你的经验与想法。'}<footer>—— {tip.data?.author || '六少社区'}</footer></blockquote>}
     </Panel>
     <Panel title={<h2>资源推介</h2>}>
       {promotions.loading ? <Loading /> : promotions.error ? <ErrorNotice error={promotions.error} retry={promotions.reload} /> : promotions.data?.length ? <ul className="resource-list">

@@ -12,7 +12,7 @@ export function Home() {
     <h1 className="sr-only">社区主题</h1>
     <div className="announcement panel" aria-label="社区公告">
       <span className="badge">公告</span>
-      {billboard.loading ? <Loading text="正在加载公告…" /> : billboard.error ? <ErrorNotice error={billboard.error} retry={billboard.reload} /> : <p>{billboard.data?.content || '欢迎来到流沙社区'}</p>}
+      {billboard.loading ? <Loading text="正在加载公告…" /> : billboard.error ? <ErrorNotice error={billboard.error} retry={billboard.reload} /> : <p>{billboard.data?.content || '欢迎来到六少社区'}</p>}
     </div>
     <div className="community-columns"><PostList discovery /><Sidebar /></div>
   </>

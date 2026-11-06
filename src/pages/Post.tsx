@@ -16,7 +16,7 @@ export default function PostDetail({ own = false }: { own?: boolean }) {
   const interaction = useResource(() => getInteraction(Number(id)), [id, auth.user?.id], Boolean(auth.user && post.data && published))
   const counts = interaction.data || { liked: false, bookmarked: false, likes: post.data?.likes || 0, bookmarks: post.data?.collects || 0, comments: post.data?.comments || 0 }
   const isAuthor = Boolean(auth.user && auth.user.id === post.data?.userId)
-  useEffect(() => { if (post.data) document.title = `${post.data.title} - 流沙社区` }, [post.data])
+  useEffect(() => { if (post.data) document.title = `${post.data.title} - 六少社区` }, [post.data])
   async function toggle(kind: 'like' | 'bookmark') {
     if (!auth.user) { void navigate(`/login?redirect=${encodeURIComponent(location.pathname + location.search)}`); return }
     let confirmed = interaction.data

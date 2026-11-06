@@ -1,6 +1,7 @@
 {
-  "short_name": "流沙社区",
-  "name": "流沙社区 React 版",
+  "short_name": "六少社区",
+  "name": "六少社区 React 版",
+  "description": "六少社区始于大学时期，以六人之名纪念大学生涯。",
   "icons": [
     {
       "src": "favicon.ico",
